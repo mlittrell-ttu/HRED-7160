@@ -26,4 +26,37 @@ These basic commands are meant to supplment what is seen in the text. There is o
 15. `cd ..` - Changes the working directory to the level before it.
 16. `cd ~` - Returns you to the home directory from anywhere.
 17. `history` - See all previously run commands.
-18. `man pwd` - Shows the help manual for any command. 
+18. `man pwd` - Shows the help manual for any command.
+19. `sort file.txt` - Sorts text alphabetically.
+20. `sorts numbers.txt` - Sorts numbers in order.
+
+## Tutorial
+The tutorial below incorporates parts of the tutorial from the text as well as some additional elements. Note if you are using Windows you will need to install emacs with the command `sudo snap install emacs --classic`. If you are using a Mac your default editor will be nano, so simply replace each instance of the command `emacs` with the command `nano`.
+
+From the BASH prompt:
+1. `mkdir university_data` - Create a directory called university_data.
+2. `cd university_data` - Changes the present working directory to univeristy_data.
+3. 
+### Data to work with
+```
+John       Smith       3.2
+Emma       Johnson     3.8
+Liam       Williams    2.5
+Olivia     Brown       3.9
+Noah       Jones       2.1
+Ava        Garcia      3.4
+William    Miller      2.9
+Sophia     Davis       3.7
+James      Rodriguez   1.8
+Isabella   Martinez    3.5
+Benjamin   Hernandez   2.2
+Mia        Lopez       3.6
+Elijah     Gonzalez    3.1
+Charlotte  Wilson      2.7
+Mason      Anderson    3.0
+Amelia     Thomas      3.3
+Lucas      Taylor      1.9
+Harper     Moore       2.6
+Henry      Jackson     4.0
+Evelyn     Martin      1.5
+```
