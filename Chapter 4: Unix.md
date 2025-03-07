@@ -23,4 +23,5 @@ These basic commands are meant to supplment what is seen in the text. There is o
 12. `rm file.txt` - Deletes a files
 13. `rmdir folderName` - Deletes a directory
 14. `cd /example/path/documents` - Changes working directory that you are currently located in
-15. 
+15. `cd ..` - Changes the working directory to the level before it.
+16. `cd ~` - Returns you to the home directory from anywhere.
