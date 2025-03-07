@@ -20,8 +20,10 @@ These basic commands are meant to supplment what is seen in the text. There is o
 9. `cp file1.txt file2.txt` – Copies a file.
 10. `mv file.txt folder/` – Moves a file to a folder.
 11. `mv oldname.txt newname.txt` – Renames a file.
-12. `rm file.txt` - Deletes a files
-13. `rmdir folderName` - Deletes a directory
+12. `rm file.txt` - Deletes a files.
+13. `rmdir folderName` - Deletes a directory.
 14. `cd /example/path/documents` - Changes working directory that you are currently located in
 15. `cd ..` - Changes the working directory to the level before it.
 16. `cd ~` - Returns you to the home directory from anywhere.
+17. `history` - See all previously run commands.
+18. `man pwd` - Shows the help manual for any command. 
