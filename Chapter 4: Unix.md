@@ -34,13 +34,17 @@ These basic commands are meant to supplment what is seen in the text. There is o
 The tutorial below incorporates parts of the tutorial from the text as well as some additional elements.
 
 From the BASH prompt:
+## Navigation and data import
 1. `mkdir university_data` - Create a directory called university_data.
 2. `cd university_data` - Changes the working directory to univeristy_data.
 3. `touch student_list.txt` - Creates the text file student_list.
 4. `ls` - Shows the contents of the directory with the newly created file.
 5. `nano student_list.txt` - Opens student_list in the Nano text editor.
 6. Copy and paste the [Student List Data](https://github.com/mlittrell-ttu/HRED-7160/blob/main/Chapter%204:%20Unix.md#tutorial) into your Nano.
-7. `Ctrl+O`, then `enter`, then `ctrl+x` - Saves the pasted text to the student_list file.
+7. `Ctrl+o`, then `enter`, then `ctrl+x` - Saves the pasted text to the student_list file.
+## Examining the data
+1. `cat student_list.txt` - outputs the file contents to the terminal.
+2. `head student_list.txt` - outputs the first 10 lines of the file to the terminal.
 ### Student List Data
 ```
 John       Smith       3.2
