@@ -31,13 +31,17 @@ These basic commands are meant to supplment what is seen in the text. There is o
 20. `sorts numbers.txt` - Sorts numbers in order.
 
 ## Tutorial
-The tutorial below incorporates parts of the tutorial from the text as well as some additional elements. Note if you are using Windows you will need to install emacs with the command `sudo snap install emacs --classic`. If you are using a Mac your default editor will be nano, so simply replace each instance of the command `emacs` with the command `nano`.
+The tutorial below incorporates parts of the tutorial from the text as well as some additional elements.
 
 From the BASH prompt:
 1. `mkdir university_data` - Create a directory called university_data.
-2. `cd university_data` - Changes the present working directory to univeristy_data.
-3. 
-### Data to work with
+2. `cd university_data` - Changes the working directory to univeristy_data.
+3. `touch student_list.txt` - Creates the text file student_list.
+4. `ls` - Shows the contents of the directory with the newly created file.
+5. `nano student_list.txt` - Opens student_list in the Nano text editor
+6. Copy and paste the Student List Data into your Nano.
+7.  
+### Student List Data
 ```
 John       Smith       3.2
 Emma       Johnson     3.8
