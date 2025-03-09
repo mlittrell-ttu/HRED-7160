@@ -42,9 +42,6 @@ From the BASH prompt:
 5. `nano student_list.txt` - Opens student_list in the Nano text editor.
 6. Copy and paste the [Student List Data](https://github.com/mlittrell-ttu/HRED-7160/blob/main/Chapter%204%3A%20Unix.md#student-list-data) into your Nano.
 7. `Ctrl+o`, then `enter`, then `ctrl+x` - Saves the pasted text to the student_list file.
-## Examining the data
-1. `cat student_list.txt` - outputs the file contents to the terminal.
-2. `head student_list.txt` - outputs the first 10 lines of the file to the terminal.
 ### Student List Data
 ```
 John       Smith       3.2
@@ -68,3 +65,7 @@ Harper     Moore       2.6
 Henry      Jackson     4.0
 Evelyn     Martin      1.5
 ```
+## Examining the data
+1. `cat student_list.txt` - Outputs the file contents to the terminal.
+2. `head student_list.txt` - Outputs the first 10 lines of the file to the terminal.
+3. `less student_list.txt` - Outputs the file contents without clogging the terminal. `q` to exit.
