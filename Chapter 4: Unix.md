@@ -43,6 +43,7 @@ From the BASH prompt:
 6. Copy and paste the [Student List Data](https://github.com/mlittrell-ttu/HRED-7160/blob/main/Chapter%204%3A%20Unix.md#student-list-data) into your Nano.
 7. `Ctrl+o`, then `enter`, then `ctrl+x` - Saves the pasted text to the student_list file.
 8. `touch other_student_list.txt` - This creates another blank list to give context to our later commands.
+
 ### Student majors list
 Note: This list is seperated by tabs which is the default delimeter for many BASH commands. So copy and paste all of the data exactly as is.
 ```
@@ -69,7 +70,7 @@ Evelyn	Martin	Engineering
 ```
 ## Examining the data
 1. `cat student_list.txt` - Outputs the file contents to the terminal.
-2. `grep 'Engineering' *.txt' - Searches
+2. `grep 'Engineering' *.txt' - Searches all txt files in the directory telling us which files contain students with Engineering majors and shows us the row entries.
 3. `head student_list.txt` - Outputs the first 10 lines of the file to the terminal.
 4. `less student_list.txt` - Outputs the file contents without clogging the terminal. `q` to exit.
 5. `cat student_list.txt | cut -f 3` - Pipes (|) the cat command over to the cut command to give us only the list of majors (-f 3 means column 3) for inspection.
