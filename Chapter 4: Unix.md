@@ -42,30 +42,33 @@ From the BASH prompt:
 5. `nano student_list.txt` - Opens student_list in the Nano text editor.
 6. Copy and paste the [Student List Data](https://github.com/mlittrell-ttu/HRED-7160/blob/main/Chapter%204%3A%20Unix.md#student-list-data) into your Nano.
 7. `Ctrl+o`, then `enter`, then `ctrl+x` - Saves the pasted text to the student_list file.
-### Student List Data
+### Student Major Data
+Note: This list is seperated by tabs which is the default delimeter for many BASH commands. So copy and paste all of the data exactly as is.
 ```
-John       Smith       3.2
-Emma       Johnson     3.8
-Liam       Williams    2.5
-Olivia     Brown       3.9
-Noah       Jones       2.1
-Ava        Garcia      3.4
-William    Miller      2.9
-Sophia     Davis       3.7
-James      Rodriguez   1.8
-Isabella   Martinez    3.5
-Benjamin   Hernandez   2.2
-Mia        Lopez       3.6
-Elijah     Gonzalez    3.1
-Charlotte  Wilson      2.7
-Mason      Anderson    3.0
-Amelia     Thomas      3.3
-Lucas      Taylor      1.9
-Harper     Moore       2.6
-Henry      Jackson     4.0
-Evelyn     Martin      1.5
+John	Smith	Computer Science  
+Emma	Johnson	Biology  
+Liam	Williams	Psychology  
+Olivia	Brown	Business  
+Noah	Jones	Engineering  
+Ava	Garcia	Computer Science  
+William	Miller	Biology  
+Sophia	Davis	Psychology  
+James	Rodriguez	Business  
+Isabella	Martinez	Engineering  
+Benjamin	Hernandez	Computer Science  
+Mia	Lopez	Biology  
+Elijah	Gonzalez	Psychology  
+Charlotte	Wilson	Business  
+Mason	Anderson	Engineering  
+Amelia	Thomas	Computer Science  
+Lucas	Taylor	Biology  
+Harper	Moore	Psychology  
+Henry	Jackson	Business  
+Evelyn	Martin	Engineering  
 ```
 ## Examining the data
 1. `cat student_list.txt` - Outputs the file contents to the terminal.
 2. `head student_list.txt` - Outputs the first 10 lines of the file to the terminal.
 3. `less student_list.txt` - Outputs the file contents without clogging the terminal. `q` to exit.
+4. `cat student_list.txt | cut -f 2 student_list.txt` - Pipes (|) the cat command over to the cut command to give us only the second column for inspection.
+5. 
