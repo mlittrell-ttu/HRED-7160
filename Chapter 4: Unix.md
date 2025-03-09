@@ -49,9 +49,10 @@ From the BASH prompt:
 5. `ls` - Shows the contents of the directory with the newly created files.
 6. `nano a_student_list.txt` - Opens student_list in the Nano text editor.
 7. Copy and paste the Students majors list A (found below) into Nano.
-8. `Ctrl+o`, then `enter`, then `ctrl+x` - Saves the pasted text to the student_list file.
+8. `Ctrl+o`, then `enter`, then `ctrl+x` - Saves the pasted text to the file and exits Nano.
 9. `touch b_student_list.txt` - This creates another blank list to give context to our later commands.
 10. Copy and paste the Students majors list B (found below) into your Nano.
+11. `Ctrl+o`, then `enter`, then `ctrl+x` - Saves the pasted text to the file and exits Nano.
 
 ### Student majors list A
 Note: This list is seperated by tabs which is the default delimeter for many BASH commands. So copy and paste all of the data exactly as is.
@@ -103,9 +104,10 @@ Stella	Bowman	Engineering
 ```
 
 ## Examining the data
-1. `cat student_list.txt` - Outputs the file contents to the terminal.
-2. `grep 'Engineering' *.txt' - Searches all txt files in the directory telling us which files contain students with Engineering majors and shows us the row entries.
-3. `head student_list.txt` - Outputs the first 10 lines of the file to the terminal.
-4. `less student_list.txt` - Outputs the file contents without clogging the terminal. `q` to exit.
-5. `cat student_list.txt | cut -f 3` - Pipes (|) the cat command over to the cut command to give us only the list of majors (-f 3 means column 3) for inspection.
-6. `cat student_list.txt | cut -f 3 | sort | uniq -c` - Displays the unique values in the third column and counts them.
+1. `cat a_student_list.txt` - Outputs the file contents to the terminal.
+2. `head a_student_list.txt` - Outputs the first 10 lines of the file to the terminal.
+3. `less a_student_list.txt` - Outputs the file contents without clogging the terminal. `q` to exit.
+4. `grep 'Engineering' *.txt' - Searches all txt files in the directory telling us which files contain students with Engineering majors and shows us the row entries.
+5. `grep "Engineering" *.txt | tr '\t' ',' > results.csv` - Outputs all of the engineering students to a csv file. Tr (translate) is replacing the tabs with commas.
+6. `cat a_student_list.txt | cut -f 3` - Pipes (|) the cat command over to the cut command to give us only the list of majors (-f 3 means column 3) for inspection.
+8. `cat *.txt | cut -f 3 | sort | uniq -c` - Displays the unique values in the third column and counts them.
