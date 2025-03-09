@@ -110,4 +110,5 @@ Stella	Bowman	Engineering
 4. `grep 'Engineering' *.txt' - Searches all txt files in the directory telling us which files contain students with Engineering majors and shows us the row entries.
 5. `grep "Engineering" *.txt | tr '\t' ',' > results.csv` - Outputs all of the engineering students to a csv file. Tr (translate) is replacing the tabs with commas.
 6. `cat a_student_list.txt | cut -f 3` - Pipes (|) the cat command over to the cut command to give us only the list of majors (-f 3 means column 3) for inspection.
-8. `cat *.txt | cut -f 3 | sort | uniq -c` - Displays the unique values in the third column and counts them.
+8. `cat *.txt | cut -f 3 | sort | uniq -c` - Displays the unique values in the third column for all txt files in the directory and counts them.
+9. 
