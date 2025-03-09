@@ -44,13 +44,14 @@ The tutorial below incorporates parts of the tutorial from the text as well as s
 From the BASH prompt:
 1. `mkdir university_data` - Create a directory called university_data.
 2. `cd university_data` - Changes the working directory to univeristy_data.
-3. `touch student_list.txt` - Creates the text file student_list.
-4. `ls` - Shows the contents of the directory with the newly created file.
-5. `nano a_student_list.txt` - Opens student_list in the Nano text editor.
-6. Copy and paste the Students majors list A into your Nano.
-7. `Ctrl+o`, then `enter`, then `ctrl+x` - Saves the pasted text to the student_list file.
-8. `touch b_student_list.txt` - This creates another blank list to give context to our later commands.
-9. Copy and paste the Students majors list B into your Nano.
+3. `touch a_student_list.txt` - Creates the text file a_student_list.
+4. `touch b_student_list.txt` - Creates the text file b_student_list.
+5. `ls` - Shows the contents of the directory with the newly created files.
+6. `nano a_student_list.txt` - Opens student_list in the Nano text editor.
+7. Copy and paste the Students majors list A (found below) into Nano.
+8. `Ctrl+o`, then `enter`, then `ctrl+x` - Saves the pasted text to the student_list file.
+9. `touch b_student_list.txt` - This creates another blank list to give context to our later commands.
+10. Copy and paste the Students majors list B (found below) into your Nano.
 
 ### Student majors list A
 Note: This list is seperated by tabs which is the default delimeter for many BASH commands. So copy and paste all of the data exactly as is.
