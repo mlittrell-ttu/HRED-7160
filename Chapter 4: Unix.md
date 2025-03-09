@@ -42,7 +42,8 @@ From the BASH prompt:
 5. `nano student_list.txt` - Opens student_list in the Nano text editor.
 6. Copy and paste the [Student List Data](https://github.com/mlittrell-ttu/HRED-7160/blob/main/Chapter%204%3A%20Unix.md#student-list-data) into your Nano.
 7. `Ctrl+o`, then `enter`, then `ctrl+x` - Saves the pasted text to the student_list file.
-### Student Major Data
+8. `touch other_student_list.txt` - This creates another blank list to give context to our later commands.
+### Student majors list
 Note: This list is seperated by tabs which is the default delimeter for many BASH commands. So copy and paste all of the data exactly as is.
 ```
 John	Smith	Computer Science  
@@ -68,7 +69,8 @@ Evelyn	Martin	Engineering
 ```
 ## Examining the data
 1. `cat student_list.txt` - Outputs the file contents to the terminal.
-2. `head student_list.txt` - Outputs the first 10 lines of the file to the terminal.
-3. `less student_list.txt` - Outputs the file contents without clogging the terminal. `q` to exit.
-4. `cat student_list.txt | cut -f 3` - Pipes (|) the cat command over to the cut command to give us only the list of majors (-f 3 means column 3) for inspection.
-5. `cat student_list.txt | cut -f 3 | sort | uniq -c` - Displays the unique values in the third column and counts them.
+2. `grep 'Engineering' *.txt' - Searches
+3. `head student_list.txt` - Outputs the first 10 lines of the file to the terminal.
+4. `less student_list.txt` - Outputs the file contents without clogging the terminal. `q` to exit.
+5. `cat student_list.txt | cut -f 3` - Pipes (|) the cat command over to the cut command to give us only the list of majors (-f 3 means column 3) for inspection.
+6. `cat student_list.txt | cut -f 3 | sort | uniq -c` - Displays the unique values in the third column and counts them.
