@@ -39,7 +39,7 @@ From the BASH prompt:
 3. `touch student_list.txt` - Creates the text file student_list.
 4. `ls` - Shows the contents of the directory with the newly created file.
 5. `nano student_list.txt` - Opens student_list in the Nano text editor
-6. Copy and paste the Student List Data into your Nano.
+6. Copy and paste the [Student List Data](https://github.com/mlittrell-ttu/HRED-7160/blob/main/Chapter%204:%20Unix.md#tutorial) into your Nano.
 7.  
 ### Student List Data
 ```
