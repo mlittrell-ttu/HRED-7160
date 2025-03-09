@@ -70,5 +70,5 @@ Evelyn	Martin	Engineering
 1. `cat student_list.txt` - Outputs the file contents to the terminal.
 2. `head student_list.txt` - Outputs the first 10 lines of the file to the terminal.
 3. `less student_list.txt` - Outputs the file contents without clogging the terminal. `q` to exit.
-4. `cat student_list.txt | cut -f 2 student_list.txt` - Pipes (|) the cat command over to the cut command to give us only the second column for inspection.
-5. 
+4. `cat student_list.txt | cut -f 3` - Pipes (|) the cat command over to the cut command to give us only the list of majors (-f 3 means column 3) for inspection.
+5. `cat student_list.txt | cut -f 3 | sort | uniq -c` - Displays the unique values in the third column and counts them.
