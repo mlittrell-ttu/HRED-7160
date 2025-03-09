@@ -40,7 +40,7 @@ These basic commands are meant to supplment what is seen in the text. There is o
 ## Tutorial
 The tutorial below incorporates parts of the tutorial from the text as well as some additional elements.
 
-## Navigation and data import
+### Navigation and data import
 From the BASH prompt:
 1. `mkdir university_data` - Create a directory called university_data.
 2. `cd university_data` - Changes the working directory to univeristy_data.
@@ -103,7 +103,7 @@ Gabriel	Barton	Biology
 Stella	Bowman	Engineering  
 ```
 
-## Examining the data
+### Examining the data
 1. `cat a_student_list.txt` - Outputs the file contents to the terminal.
 2. `head a_student_list.txt` - Outputs the first 10 lines of the file to the terminal.
 3. `less a_student_list.txt` - Outputs the file contents without clogging the terminal. `q` to exit.
