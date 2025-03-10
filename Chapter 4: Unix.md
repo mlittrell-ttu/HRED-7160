@@ -150,5 +150,17 @@ The columns for this data are:
 - sort - Sorts the department names.
 - uniq -c - Counts occurrences of each department.
 - sort -nr - Sorts the counts in descending order.
-- head -3 - Displays only the top 3 departments. 
+- head -3 - Displays only the top 3 departments.
+
+## Chapter 4 Assignment:
+Continue working with the student_engagment.csv data to answer further questions about the topic. Answer the following questions by including the command that you entered and a screen shot (using Snipping Tool, Greenshots, etc.) of the output. Helpful for this assignment could be the man command (example `man awk`) and generative AI for direction.
+### Questions to answer:
+1. Identify students who have a failing final grade below 70.
+2. Find the number of students with more than 10 logins.
+3. Find the top 5 students in terms of forum post count and output the results to a new file called top_5.csv.
+4. Find the students who only completed 1 assignment.
+5. Find the students who completed less than 3 assignments and also had a grade of 70 or less.
+6. Copy the student_engagment.csv data set to a new file called student_engagment_2.csv and count how many engineering students are now in both files collectively.
+7. Delete the newly created student_engagment_2.csv file.
+
 
