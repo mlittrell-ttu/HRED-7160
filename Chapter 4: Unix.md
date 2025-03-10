@@ -30,17 +30,18 @@ These basic commands are meant to supplment what is seen in the text. There is o
 - `tail file.txt` – Shows the last 10 lines of a file.  
 - `grep "word" file.txt` – Finds lines containing "word" in a file.  
 - `sort file.txt` – Sorts text alphabetically.  
-- `sort numbers.txt` – Sorts numbers in order.  
+- `sort numbers.txt` – Sorts numbers in order.
+- `awk` - Searches text for specified patterns.
 
 ### Searching & Help
 - `find . -name "file.txt"` – Searches for a file named "file.txt" in the current folder.  
 - `history` – Displays previously run commands.  
 - `man pwd` – Shows the help manual for any command.  
 
-## Tutorial
+## Tutorial 1: Navigation and file manipulation
 The tutorial below incorporates parts of the tutorial from the text as well as some additional elements.
 
-### Navigation and data import
+### Navigation and data creation
 From the BASH prompt:
 1. `mkdir university_data` - Create a directory called university_data.
 2. `cd university_data` - Changes the working directory to univeristy_data.
@@ -107,8 +108,47 @@ Stella	Bowman	Engineering
 1. `cat a_student_list.txt` - Outputs the file contents to the terminal.
 2. `head a_student_list.txt` - Outputs the first 10 lines of the file to the terminal.
 3. `less a_student_list.txt` - Outputs the file contents without clogging the terminal. `q` to exit.
-4. `grep 'Engineering' *.txt' - Searches all txt files in the directory telling us which files contain students with Engineering majors and shows us the row entries.
+4. `grep 'Engineering' *.txt` - Searches all txt files in the directory telling us which files contain students with Engineering majors and shows us the row entries.
 5. `grep "Engineering" *.txt | tr '\t' ',' > results.csv` - Outputs all of the engineering students to a csv file. Tr (translate) is replacing the tabs with commas.
 6. `cat a_student_list.txt | cut -f 3` - Pipes (|) the cat command over to the cut command to give us only the list of majors (-f 3 means column 3) for inspection.
 8. `cat *.txt | cut -f 3 | sort | uniq -c` - Displays the unique values in the third column for all txt files in the directory and counts them.
-9. 
+
+## Tutorial 2: Exploration and simple analysis
+Scenario: You are a university professional who has been provided some data from your course management software (iLearn) with the open ended goal of exploring the data to understand student engagement with iLearn courses.
+
+- student_id - Unique ID for each student
+- course_id - Unique ID for the course
+- department - Department offering the course
+- logins - Number of times the student logged in
+- videos_watched - Number of lecture videos watched
+- assignments_completed - Number of assignments completed
+- forum_posts - Number of discussion forum posts
+- final_grade - Final grade as a percentage
+
+### Import the data:
+To work with the data(student_engagement.csv), download it [here](https://tennesseetechuniversity-my.sharepoint.com/:x:/g/personal/mlittrell_tntech_edu/EcFLuxTfjAFGhVHUbuDKH5cBo1FSe06cihwq-gK4u4YWcw?e=vs8zLR) and use your OS to drag and drop it into your folder university_data.
+
+The columns for this data are:
+
+1. `cd university_data` - Changes your current directory to the previously created univeristy_data directory.
+2. `cut -d ',' -f3 student_engagement.csv | sort | uniq -c` - Outputs the number of students in each department.
+- cut -d ',' -f3 - extracts the department column (column c) specifying commas (instead of the default tab) for the delimiter.
+- sort - orders the department names.
+- uniq -c - counts how many times each unique department name appears.
+3. `awk -F ',' '$3 == "Business" && $8 >= 80' student_engagement.csv | wc -l` - Counts the number of business students who also scored 80 or above on their final grade.
+- -F ',' tells awk to use a comma as the delimiter.
+- $3 == "Business" - filters rows where the department (column 3) is "Business."
+- $8 >= 80 - filters rows where the final grade (column 8) is 80 or above.
+- | wc -l = counts how many rows match both conditions.
+4. `cut -d ',' -f3 student_engagement.csv | sort | uniq -c | sort -n` - Counts the number of students in each department and lists the counts in ascending order.
+- cut -d ',' -f3 - Extracts the department column (column 3).
+- sort - Sorts the department names.
+- uniq -c - Counts occurrences of each department.
+- sort -n - Sorts the counts in ascending order.
+5. `awk -F ',' '$4 > 30 {print $3}' student_engagement.csv | sort | uniq -c | sort -nr | head -3` - Counts students who logged in more than 30 times and lists the top three departments for which this contdition was true.
+- awk -F ',' '$4 > 30 {print $3}' - Filters students with more than 30 logins and prints their department (column 3).
+- sort - Sorts the department names.
+- uniq -c - Counts occurrences of each department.
+- sort -nr - Sorts the counts in descending order.
+- head -3 - Displays only the top 3 departments. 
+
